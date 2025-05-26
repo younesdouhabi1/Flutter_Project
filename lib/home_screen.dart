@@ -1,35 +1,28 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
+void main() {
+  runApp(MyApp());
 }
-
-
-class _HomeScreenState extends State<HomeScreen> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start, // Aligns the title to the left
-        children: [
-          Padding(
-            padding: EdgeInsets.only(top: 50), // Moves the title down a bit
+    return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.black),
+      home: Scaffold(
+        appBar: AppBar(),
+        body: Padding(
+          padding: EdgeInsets.only(top: 60,bottom: 500), // Move text up by 60 pixels
+          child: Center(
             child: Text(
-              'Edit Profile',
+              "Hello world !",
               style: TextStyle(
-                fontSize: 30,
                 fontWeight: FontWeight.bold,
+                fontSize: 25,
               ),
             ),
           ),
-        ],
+        ),
       ),
     );
   }
 }
-
-
