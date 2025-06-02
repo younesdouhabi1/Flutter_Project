@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(),
       body: Padding(
         padding: EdgeInsets.only(
-          top: 200,
+          top: 100,
           right: 10,
           left: 10,
         ), // Move text up by 60 pixels
@@ -22,7 +22,12 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image(image: AssetImage('assets/images/phone1.png')),
+            SizedBox(
+              width: 100,
+              height: 100,
+              child: Image(image: AssetImage('assets/images/smartphone.png')),
+            ),
+            SizedBox(height: 20),
             Text(
               "Say Hello To You New App! ",
               style: TextStyle(
@@ -42,26 +47,32 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: 60),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
-              onPressed: () => {},
-              child: Text(
-                'Log In',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+            SizedBox(
+              width: 250,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+                onPressed: () {},
+                child: Text(
+                  'Log In',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
             SizedBox(height: 10),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-              onPressed: () => {},
-              child: Text(
-                'Sign Up',
-                style: TextStyle(
-                  color: const Color.fromARGB(255, 101, 101, 101),
-                  fontWeight: FontWeight.bold,
+            SizedBox(
+              width: 250,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                onPressed: () => {},
+                child: Text(
+                  'Sign Up',
+                  style: TextStyle(
+                    color: const Color.fromARGB(255, 101, 101, 101),
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
