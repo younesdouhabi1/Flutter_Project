@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,28 +16,36 @@ class LoginScreen extends StatelessWidget {
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Log In',
+                'Create new account',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.purple,
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 32),
+
+            Center(
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('assets/images/profile_photo.jpg'),
+              ),
+            ),
+            SizedBox(height: 32),
             TextField(
               decoration: InputDecoration(
-                labelText: '  E-mail Address',
+                labelText: '   E-mail Address',
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(30),
                   borderSide: BorderSide(color: Colors.purple, width: 2),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(30),
                   borderSide: BorderSide(color: Colors.purple, width: 2),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(30),
                   borderSide: BorderSide(color: Colors.purple, width: 2),
                 ),
               ),
@@ -47,68 +55,33 @@ class LoginScreen extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: '  Password',
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(30),
                   borderSide: BorderSide(color: Colors.purple, width: 2),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(30),
                   borderSide: BorderSide(color: Colors.purple, width: 2),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(30),
                   borderSide: BorderSide(color: Colors.purple, width: 2),
                 ),
               ),
               obscureText: true,
             ),
             SizedBox(height: 32),
-
             SizedBox(
-              width: 350,
+              width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
                 onPressed: () {},
                 child: Text(
-                  'Log In',
+                  'Sign Up',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
-              ),
-            ),
-            SizedBox(height: 20),
-            Text(
-              "OR",
-              style: TextStyle(
-                color: const Color.fromARGB(255, 144, 144, 144),
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 16),
-            SizedBox(
-              width: 350,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(
-                    255,
-                    27,
-                    112,
-                    223,
-                  ), // Facebook blue
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                ),
-                icon: Icon(Icons.facebook, color: Colors.white, size: 24),
-                label: Text(
-                  'Facebook Login',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-                onPressed: () {},
               ),
             ),
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_2025/sign_up_screen.dart';
 import 'login_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -80,7 +81,13 @@ class _HomeScreenState extends State<HomeScreen> {
               width: 350,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-                onPressed: () => {},
+                onPressed:
+                    () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUpScreen()),
+                      ),
+                    },
                 child: Text(
                   'Sign Up',
                   style: TextStyle(
