@@ -12,6 +12,14 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            Row(
+              children: [
+                _simpleButton(Colors.green),
+                SizedBox(width: 10),
+                _simpleButton(Colors.blue),
+              ],
+            ),
+
             SizedBox(height: 100),
             Align(
               alignment: Alignment.centerLeft,
@@ -80,6 +88,18 @@ class LoginScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _simpleButton(Color color1) {
+    return Container(
+      height: 70,
+      width: 70,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(12)),
+        color: color1.withValues(alpha: 0.3),
+      ),
+      child: Icon(Icons.arrow_upward, size: 40, color: color1),
     );
   }
 }
