@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_2025/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -25,57 +26,17 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
-            TextField(
-              decoration: InputDecoration(
-                labelText: '  E-mail Address',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-              ),
-            ),
-            SizedBox(height: 16),
-            TextField(
-              decoration: InputDecoration(
-                labelText: '  Password',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-              ),
-              obscureText: true,
-            ),
-            SizedBox(height: 32),
 
-            SizedBox(
-              width: 350,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
-                onPressed: () {},
-                child: Text(
-                  'Log In',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
+            WidgetsAuth.textField('  E-mail Address'),
+            SizedBox(height: 16),
+            WidgetsAuth.textField('  Password'),
+
+            SizedBox(height: 32),
+            WidgetsAuth.buttons(
+              'Log In',
+              Colors.purple,
+              false,
+              TextStyle(fontSize: null),
             ),
             SizedBox(height: 20),
             Text(
@@ -86,30 +47,11 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            SizedBox(
-              width: 350,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(
-                    255,
-                    27,
-                    112,
-                    223,
-                  ), // Facebook blue
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                ),
-                icon: Icon(Icons.facebook, color: Colors.white, size: 24),
-                label: Text(
-                  'Facebook Login',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-                onPressed: () {},
-              ),
+            WidgetsAuth.buttons(
+              'Facebook Login',
+              Color(0xFF3b5998),
+              true,
+              TextStyle(fontSize: null),
             ),
           ],
         ),

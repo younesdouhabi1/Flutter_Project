@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_2025/sign_up_screen.dart';
+import 'package:flutter_test_2025/widgets.dart';
 import 'login_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -56,46 +57,21 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: 60),
-            SizedBox(
-              width: 350,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
-                onPressed:
-                    () => {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => LoginScreen()),
-                      ),
-                    },
-                child: Text(
-                  'Log In',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+
+            WidgetsAuth.buttons(
+              'Log In',
+              Colors.purple,
+              false,
+              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
+
             SizedBox(height: 10),
-            SizedBox(
-              width: 350,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-                onPressed:
-                    () => {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SignUpScreen()),
-                      ),
-                    },
-                child: Text(
-                  'Sign Up',
-                  style: TextStyle(
-                    color: const Color.fromARGB(255, 99, 99, 99),
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+
+            WidgetsAuth.buttons(
+              "Sign Up",
+              Colors.white,
+              false,
+              TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
             ),
           ],
         ),

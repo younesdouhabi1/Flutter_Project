@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_2025/widgets.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -25,7 +26,6 @@ class SignUpScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 32),
-
             Center(
               child: CircleAvatar(
                 radius: 50,
@@ -33,56 +33,17 @@ class SignUpScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 32),
-            TextField(
-              decoration: InputDecoration(
-                labelText: '   E-mail Address',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-              ),
-            ),
+
+            WidgetsAuth.textField('  E-mail Address'),
             SizedBox(height: 16),
-            TextField(
-              decoration: InputDecoration(
-                labelText: '  Password',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide(color: Colors.purple, width: 2),
-                ),
-              ),
-              obscureText: true,
-            ),
+            WidgetsAuth.textField('  Password'),
+
             SizedBox(height: 32),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
-                onPressed: () {},
-                child: Text(
-                  'Sign Up',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
+            WidgetsAuth.buttons(
+              'Sign Up',
+              Colors.purple,
+              false,
+              TextStyle(fontSize: null),
             ),
           ],
         ),
