@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_2025/sign_up_screen.dart';
+import 'package:flutter_test_2025/widgets.dart';
+import 'login_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,12 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              width: 100,
-              height: 100,
-              child: Image(image: AssetImage('assets/images/smartphone.png')),
-            ),
-            SizedBox(height: 20),
+            Image(image: AssetImage('assets/images/phone1.png')),
             Text(
               "Say Hello To You New App! ",
               style: TextStyle(
@@ -36,43 +34,43 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: const Color.fromARGB(255, 187, 74, 207),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             Center(
-              child: Text(
-                "You've just saved a week of development and headaches!",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: const Color.fromARGB(255, 80, 79, 79),
+              child: SizedBox(
+                width: 300,
+                child: Text(
+                  "You've just saved a week of development and headaches!",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 95, 95, 95),
+                  ),
                 ),
               ),
             ),
             SizedBox(height: 60),
-            SizedBox(
-              width: 250,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
-                onPressed: () {},
-                child: Text(
-                  'Log In',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+              onPressed: () => {},
+              child: Text(
+                'Log In',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
+
             SizedBox(height: 10),
-            SizedBox(
-              width: 250,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-                onPressed: () => {},
-                child: Text(
-                  'Sign Up',
-                  style: TextStyle(
-                    color: const Color.fromARGB(255, 101, 101, 101),
-                    fontWeight: FontWeight.bold,
-                  ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
+              onPressed: () => {},
+              child: Text(
+                'Sign Up',
+                style: TextStyle(
+                  color: const Color.fromARGB(255, 101, 101, 101),
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
