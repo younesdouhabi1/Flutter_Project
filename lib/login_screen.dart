@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
         padding: const EdgeInsets.all(25.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: [
+          children: <Widget>[
             SizedBox(height: 100),
             Align(
               alignment: Alignment.centerLeft,
@@ -27,16 +27,18 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(height: 30),
 
-            WidgetsAuth.textField('  E-mail Address'),
+            WidgetsAuth.textField('  E-mail Address', obscureText: false),
             SizedBox(height: 16),
-            WidgetsAuth.textField('  Password'),
+            WidgetsAuth.textField('  Password', obscureText: false),
 
             SizedBox(height: 32),
             WidgetsAuth.buttons(
-              'Log In',
-              Colors.purple,
-              false,
-              TextStyle(fontSize: null),
+              title: 'Log In',
+              color: Colors.purple,
+              isShow: false,
+              textStyle: TextStyle(fontSize: null),
+              onPressed:
+                  () {}, // Add a placeholder function or your desired callback
             ),
             SizedBox(height: 20),
             Text(
@@ -46,12 +48,13 @@ class LoginScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 16),
             WidgetsAuth.buttons(
-              'Facebook Login',
-              Color(0xFF3b5998),
-              true,
-              TextStyle(fontSize: null),
+              title: 'Facebook Login',
+              color: Color(0xFF3b5998),
+              isShow: true,
+              textStyle: TextStyle(fontSize: null),
+              onPressed:
+                  () {}, // Add a placeholder function or your desired callback
             ),
           ],
         ),

@@ -25,14 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              height: 120,
-              width: 120,
-              child: Image(
-                image: AssetImage('assets/images/telephone-intelligent.png'),
-              ),
-            ),
-            SizedBox(height: 30),
+            Image(image: AssetImage('assets/images/phone1.png')),
             Text(
               "Say Hello To You New App! ",
               style: TextStyle(
@@ -57,21 +50,65 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: 60),
+<<<<<<< HEAD
 
             WidgetsAuth.buttons(
-              'Log In',
-              Colors.purple,
-              false,
-              TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            ),
+              title: 'Log In',
+              color: Colors.purple,
+              isShow: false,
+              textStyle: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
+            ), //This is for the login button..
 
             SizedBox(height: 10),
 
             WidgetsAuth.buttons(
-              "Sign Up",
-              Colors.white,
-              false,
-              TextStyle(fontWeight: FontWeight.bold, color: Colors.grey),
+              title: "Sign Up",
+              color: Colors.white,
+              isShow: false,
+              textStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: const Color.fromARGB(255, 110, 110, 110),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpScreen()),
+                );
+              },
+=======
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+              onPressed: () => {},
+              child: Text(
+                'Log In',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+
+            SizedBox(height: 10),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
+              onPressed: () => {},
+              child: Text(
+                'Sign Up',
+                style: TextStyle(
+                  color: const Color.fromARGB(255, 101, 101, 101),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+>>>>>>> 7cb7bc52dd4b22150d635ff4072e48dd5b61002d
             ),
           ],
         ),
